@@ -1,5 +1,3 @@
-CREATE DATABASE dindin;
-
 CREATE TABLE usuarios (
 	id SERIAL PRIMARY KEY,
   	nome TEXT NOT NULL,
@@ -13,13 +11,15 @@ CREATE TABLE categorias (
 );
 
 CREATE TABLE transacoes (
-	id SERIAL PRIMARY KEY,
-  	descricao VARCHAR(30),
-  	valor NUMERIC CHECK (valor > 0) NOT NULL,
-  	data_transacao DATE DEFAULT now(),
-  	categoria_id INTEGER REFERENCES categorias(id),
-  	usuario_id INTEGER REFERENCES usuarios(id),
-  	tipo VARCHAR(40) NOT NULL
+    id serial primary key,
+    tipo text NOT NULL,
+    descricao text NOT NULL,
+    valor integer NOT NULL,
+    data varchar(255),
+    usuario_id integer NOT NULL,
+    categoria_id integer NOT NULL,
+    foreign key (usuario_id) references usuarios (id),
+    foreign key (categoria_id) references categorias (id)
 );
 
 INSERT INTO categorias (descricao)

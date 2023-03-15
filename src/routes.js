@@ -24,10 +24,6 @@ const {
   verificarUsuarioTransacao,
 } = require("./middlewares/mdUserLogado");
 
-rota.get("/", async (req, res) => {
-  return res.json("API ok");
-});
-
 rota.post("/usuario", verificarDadosCadastro, cadastrarUsuario);
 rota.post("/login", verificarDadosLogin, efetuarLogin);
 

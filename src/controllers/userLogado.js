@@ -83,6 +83,8 @@ const cadastrarTransacaoLogado = async (req, res) => {
       })
       .returning("*");
 
+    console.log(transacao);
+
     if (transacao.length <= 0)
       return res.status(400).json({ mensagem: "Operação falhou!" });
 
