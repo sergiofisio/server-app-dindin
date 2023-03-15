@@ -24,30 +24,34 @@ const {
   verificarUsuarioTransacao,
 } = require("./middlewares/mdUserLogado");
 
-rota.post("/usuario", verificarDadosCadastro, cadastrarUsuario);
-rota.post("/login", verificarDadosLogin, efetuarLogin);
+rota.get("/", async (req, res) => {
+  return res.json("API ok");
+});
 
-rota.use(verificarLogin);
+// rota.post("/usuario", verificarDadosCadastro, cadastrarUsuario);
+// rota.post("/login", verificarDadosLogin, efetuarLogin);
 
-rota.get("/usuario", detalharUsuarioLogado);
-rota.get("/transacao/extrato", extratoTransacaoLogado);
-rota.get("/transacao/:id", detalharTransacaoLogado);
-rota.post("/transacao", verificarTransacao, cadastrarTransacaoLogado);
-rota.put("/usuario", verificarAtualizacaoCadastro, atualizarUsuarioLogado);
-rota.get("/categoria", listarCategorias);
-rota.get("/transacao", listarTransacoesLogado);
-rota.put(
-  "/transacao/:id",
-  verificarTransacao,
-  verificarUsuarioTransacao,
-  atualizarTransacaoLogado
-);
-rota.delete(
-  "/transacao/:id",
-  verificarUsuarioTransacao,
-  deletarTransacaoLogado
-);
+// rota.use(verificarLogin);
 
-rota.get("/usuario/categoria", listarCategoriasUsuario);
+// rota.get("/usuario", detalharUsuarioLogado);
+// rota.get("/transacao/extrato", extratoTransacaoLogado);
+// rota.get("/transacao/:id", detalharTransacaoLogado);
+// rota.post("/transacao", verificarTransacao, cadastrarTransacaoLogado);
+// rota.put("/usuario", verificarAtualizacaoCadastro, atualizarUsuarioLogado);
+// rota.get("/categoria", listarCategorias);
+// rota.get("/transacao", listarTransacoesLogado);
+// rota.put(
+//   "/transacao/:id",
+//   verificarTransacao,
+//   verificarUsuarioTransacao,
+//   atualizarTransacaoLogado
+// );
+// rota.delete(
+//   "/transacao/:id",
+//   verificarUsuarioTransacao,
+//   deletarTransacaoLogado
+// );
+
+// rota.get("/usuario/categoria", listarCategoriasUsuario);
 
 module.exports = rota;
