@@ -1,8 +1,8 @@
 # APLICAÇÃO DINDIN - BACKEND 🚀
 
-Front-end desta aplicação você pode encontrar no repositorio - https://github.com/sergiofisio/web-app-dindin
-
 Esta é uma aplicação construída utilizando Node.js, Express e integração com banco de dados PostgreSQL.
+
+Front-end desta aplicação você pode encontrar no repositorio - https://github.com/sergiofisio/web-app-dindin
 
 Nesta aplicação é possível:
 
@@ -25,12 +25,12 @@ Nesta aplicação é possível:
 ## Como rodar localmente 🖥️
 Para rodar a aplicação localmente, siga os passos abaixo:
 
-1. Clone o repositório para a sua máquina: git clone https://github.com/sergiofisio/web-app-dindin.git
-2. Entre no diretório do projeto: cd web-app-dindin
-3. Instale as dependências: npm install
+1. Clone o repositório para a sua máquina: `git clone https://github.com/sergiofisio/web-app-dindin.git`
+2. Entre no diretório do projeto: `cd web-app-dindin`
+3. Instale as dependências: `npm i`
 4. Crie um arquivo .env na raiz do projeto, preenchendo as variáveis de ambiente conforme o arquivo .env.example
 5. Crie o banco de dados executando o script SQL localizado em src\services\dump\database.sql
-6. Rode a aplicação: npm run dev
+6. Rode a aplicação: `npm run dev`
 7. Acesse a aplicação em http://localhost:5000
 
 <br>
